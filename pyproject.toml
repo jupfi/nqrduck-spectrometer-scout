@@ -27,3 +27,6 @@ dependencies = [
     "nqrduck-spectrometer",
     "pyqt5",
 ]
+
+[project.entry-points."nqrduck"]
+"nqrduck-spectrometer-scout" = "nqrduck_spectrometer_scout.scout:Scout"

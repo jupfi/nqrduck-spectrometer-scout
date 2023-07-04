@@ -1,0 +1,6 @@
+from nqrduck_spectrometer.base_spectrometer import BaseSpectrometer
+from nqrduck_spectrometer_scout.model import ScoutModel
+from nqrduck_spectrometer_scout.view import ScoutView
+from nqrduck_spectrometer_scout.controller import ScoutController
+
+Scout = BaseSpectrometer(ScoutModel, ScoutView, ScoutController)

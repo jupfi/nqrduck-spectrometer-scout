@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file '../Modules/nqrduck-spectrometer-scout/src/nqrduck_spectrometer_scout/resources/scout_widget.ui'
+# Form implementation generated from reading ui file 'src/nqrduck_spectrometer_scout/resources/scout_widget.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.1
 #
@@ -13,15 +13,26 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(800, 600)
-        self.gridLayoutWidget = QtWidgets.QWidget(parent=Form)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(-1, -1, 811, 611))
-        self.gridLayoutWidget.setObjectName("gridLayoutWidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.gridLayout = QtWidgets.QGridLayout()
         self.gridLayout.setObjectName("gridLayout")
-        self.pushButton = QtWidgets.QPushButton(parent=self.gridLayoutWidget)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout.addWidget(self.pushButton, 0, 0, 1, 1)
+        self.sequenceLabel = QtWidgets.QLabel(parent=Form)
+        self.sequenceLabel.setObjectName("sequenceLabel")
+        self.gridLayout.addWidget(self.sequenceLabel, 1, 0, 1, 1)
+        self.loadfileButton = QtWidgets.QPushButton(parent=Form)
+        self.loadfileButton.setObjectName("loadfileButton")
+        self.gridLayout.addWidget(self.loadfileButton, 2, 0, 1, 1)
+        self.filenameLabel = QtWidgets.QLabel(parent=Form)
+        self.filenameLabel.setText("")
+        self.filenameLabel.setObjectName("filenameLabel")
+        self.gridLayout.addWidget(self.filenameLabel, 1, 1, 1, 1)
+        self.titleLabel = QtWidgets.QLabel(parent=Form)
+        self.titleLabel.setObjectName("titleLabel")
+        self.gridLayout.addWidget(self.titleLabel, 0, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.gridLayout.addItem(spacerItem, 3, 0, 1, 1)
+        self.verticalLayout.addLayout(self.gridLayout)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -29,4 +40,6 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.pushButton.setText(_translate("Form", "Scout"))
+        self.sequenceLabel.setText(_translate("Form", "Sequence Name:"))
+        self.loadfileButton.setText(_translate("Form", "Load TNMR File"))
+        self.titleLabel.setText(_translate("Form", "Scout Spectrometer"))
